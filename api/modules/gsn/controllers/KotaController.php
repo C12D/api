@@ -14,7 +14,7 @@ use yii\filters\ContentNegotiator;
 use yii\filters\VerbFilter;
 use yii\web\Response;
 use yii\helpers\ArrayHelper;
-use api\modules\gsn\models\City;
+use api\modules\gsn\models\Kota;
 use yii\web\HttpException;
 //use yii\data\ActiveDataProvider;
 /**
@@ -22,9 +22,9 @@ use yii\web\HttpException;
  *
  * @author -ptr.nov-
  */
-class CityController extends ActiveController
+class KotaController extends ActiveController
 {
-    public $modelClass = 'api\modules\gsn\models\City';
+    public $modelClass = 'api\modules\gsn\models\Kota';
 	
 	  
     public function behaviors()    {
@@ -316,9 +316,9 @@ class CityController extends ActiveController
             */
 /*      
       'authenticator' => [
-                #??????`ComopositeAuth` ????
+                #这个地方使用`ComopositeAuth` 混合认证
                 'class' => CompositeAuth::className(),
-                #`authMethods` ??????????? ?? ?????????? ????
+                #`authMethods` 中的每一个元素都应该是 一种 认证方式的类或者一个 配置数组
                 'authMethods' => [
                    HttpBasicAuth::className(),
                    //HttpBearerAuth::className(),
@@ -416,9 +416,9 @@ class CityController extends ActiveController
             ],
 
             'authenticator' => [
-                #??????`ComopositeAuth` ????
+                #这个地方使用`ComopositeAuth` 混合认证
                 'class' => CompositeAuth::className(),
-                #`authMethods` ??????????? ?? ?????????? ????
+                #`authMethods` 中的每一个元素都应该是 一种 认证方式的类或者一个 配置数组
                 'authMethods' => [
                     //HttpBasicAuth::className(),
                     //HttpBearerAuth::className(),
