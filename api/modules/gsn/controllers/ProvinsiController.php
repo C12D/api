@@ -25,7 +25,10 @@ use yii\web\HttpException;
 class ProvinsiController extends ActiveController
 {
     public $modelClass = 'api\modules\gsn\models\Provinsi';
-	
+	public $serializer = [
+		'class' => 'yii\rest\Serializer',
+		'collectionEnvelope' => 'Provinsi',
+	];
 	  
     public function behaviors()    {
         return ArrayHelper::merge(parent::behaviors(), [

@@ -1,6 +1,6 @@
 <?php
 
-namespace api\modules\gsn\controllers;
+namespace api\modules\master\controllers;
 
 use yii;
 use yii\rest\ActiveController;
@@ -14,7 +14,7 @@ use yii\filters\ContentNegotiator;
 use yii\filters\VerbFilter;
 use yii\web\Response;
 use yii\helpers\ArrayHelper;
-use api\modules\gsn\models\Kota;
+use api\modules\master\models\Kategori;
 use yii\web\HttpException;
 //use yii\data\ActiveDataProvider;
 /**
@@ -22,12 +22,12 @@ use yii\web\HttpException;
  *
  * @author -ptr.nov-
  */
-class KotaController extends ActiveController
+class KategoriController extends ActiveController
 {
-    public $modelClass = 'api\modules\gsn\models\Kota';
+    public $modelClass = 'api\modules\master\models\Kategori';
 	public $serializer = [
 		'class' => 'yii\rest\Serializer',
-		'collectionEnvelope' => 'Kota',
+		'collectionEnvelope' => 'Kategori',
 	];
 	  
     public function behaviors()    {
